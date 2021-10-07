@@ -1,3 +1,5 @@
+import math
+
 # a = int(input('a= '))
 # b = int(input('b= '))
 # p = 2*a + 2*b
@@ -20,3 +22,8 @@ s = (a+b)/2*h
 print(f'S = {s}')
 print('S = %.1f' % (s))
 print('S = ', round(s, 1))
+
+print('S = ', math.ceil(s))
+print('S = ', math.floor(s))
+
+print('sqrt(2) = ', math.sqrt(2))
