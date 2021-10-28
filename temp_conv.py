@@ -1,3 +1,9 @@
+''' 
+python -m pip install pysimplegui
+ or
+pip install pysimplegui
+'''
+
 import PySimpleGUI as sg
 
 
