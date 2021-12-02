@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings</title>
+</head>
+<body>
+    <h1>Rating</h1>
+    <form action="/DrawRating" method="get">
+        <input type="number" min="0" max="100" name="rating" value="{{rating}}">
+        <input type="submit" value="Rate">
+    </form>
+    <br>
+    {% load static %}
+    {% for star in full_stars %}
+    <img src="{% static 'rating_app/full-star.png' %}" alt="full star" 
+        width="30" height="30">
+    {% endfor %}
+    {% for star in half_stars %}
+    <img src="{% static 'rating_app/half-star.png' %}" alt="half star" 
+        width="30" height="30">
+    {% endfor %}    
+    {% for star in empty_stars %}
+    <img src="{% static 'rating_app/empty-star.png' %}" alt="empty star" 
+        width="30" height="30">
+    {% endfor %}
+</body>
+</html>
