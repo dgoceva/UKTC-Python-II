@@ -35,14 +35,17 @@ print(ll)
 # del ll
 # print(ll)
 
-sum = 0
+# sum
+sum1 = 0
 # sum = 0 + 5 = 5
 # sum = 5 + 7 = 12
 # sum = sum +  number <=> sum += number
 for number in ll:
-    sum += number
-print(sum)
+    sum1 += number
+print(sum1)
+print(sum(ll, 0))
 
+# sum by condition
 sum_positive = 0
 for number in ll:
     if number > 0:
@@ -64,3 +67,54 @@ if not has_even:
     print('No even numbers...')
 else:
     print(sum_even)
+
+# count
+print(len(ll))
+
+# count by condition
+cnt = 0
+for number in ll:
+    if number % 2 != 0:
+        cnt += 1
+if cnt == 0:
+    print('No such data...')
+else:
+    print(cnt)
+
+# min
+minel = ll[0]
+for number in ll:
+    if number < minel:
+        minel = number
+print(minel)
+
+print(min(ll))
+print(max(ll))
+
+# max by condition
+init = False
+for number in ll:
+    if number < 0:
+        if not init:
+            maxel = number
+            init = True
+        elif number > maxel:
+            maxel = number
+if not init:
+    print('No such data...')
+else:
+    print(maxel)
+
+# min by condition
+init = False
+for number in ll:
+    if number % 5 == 0:
+        if not init:
+            init = True
+            minel = number
+        elif number < minel:
+            minel = number
+if not init:
+    print('No such data...')
+else:
+    print(minel)
