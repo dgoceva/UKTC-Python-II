@@ -118,3 +118,55 @@ if not init:
     print('No such data...')
 else:
     print(minel)
+
+# average
+sum1 = 0
+for num in ll:
+    sum1 += num
+if len(ll) == 0:
+    print('No such data...')
+else:
+    print('Average data: ', sum1/len(ll))
+
+# average by condition
+sum1 = 0
+cnt = 0
+size = min(len(ll), 5)
+for i in range(size):
+    sum1 += ll[i]
+    if ll[i] != 0:
+        cnt += 1
+if cnt == 0:
+    print('No such data...')
+else:
+    print('Average: ', sum1/cnt)
+
+sum1 = 0
+cnt = 0
+for num in ll:
+    if abs(num) % 10 == 4:
+        sum1 += num
+        cnt += 1
+if cnt == 0:
+    print('No more data...')
+else:
+    print('Average: ', sum1/cnt)
+
+# generate list
+result = []
+for num in ll:
+    result.append(num*2)
+print(ll)
+print(result)
+
+# generate by condition
+result = []
+for num in ll:
+    if abs(num) % 10 == 4:
+        result.append(num)
+print(result)
+
+ll.sort()
+print(ll)
+ll.sort(reverse=True)
+print(ll)
