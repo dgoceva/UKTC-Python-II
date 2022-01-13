@@ -170,3 +170,29 @@ ll.sort()
 print(ll)
 ll.sort(reverse=True)
 print(ll)
+
+# bubble sort
+print(ll)
+ready = False
+while not ready:
+    end_index = len(ll) - 1
+    ready = True
+    for i in range(end_index):
+        if ll[i] > ll[i+1]:
+            temp = ll[i]
+            ll[i] = ll[i+1]
+            ll[i+1] = temp
+            ready = False
+            # ll[i],ll[i+1] = ll[i+1],ll[i]  # python works only
+    end_index = end_index - 1
+print(ll)
+
+# selection sort
+print(ll)
+for i in range(len(ll)-1):
+    maxi = i
+    for j in range(i+1, len(ll)):
+        if ll[maxi] < ll[j]:
+            maxi = j
+    ll[maxi], ll[i] = ll[i], ll[maxi]
+print(ll)
