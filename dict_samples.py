@@ -1,6 +1,6 @@
 import json
 
-d = dict()  # {} for empty set
+d = dict()
 print(d)
 
 # add/update
@@ -50,7 +50,15 @@ print(d.values())
 f = open('europe.json')
 countries = json.load(f)
 f.close()
-print(countries)
-print(countries[0])
-print(countries[0]['properties'])
-print(countries[0]['properties']['country'])
+# print(countries)
+# print(countries[0])
+# print(countries[0]['properties'])
+# print(countries[0]['properties']['country'])
+for country in countries:
+    # print(country)
+    # print(country['properties'])
+    # print(country['properties']['country'])
+    if country['properties']['country'][0].upper() == 'B':
+        print(country['properties'])
+    if country['properties']['capital'][0].upper() == 'S':
+        print(country['properties'])
