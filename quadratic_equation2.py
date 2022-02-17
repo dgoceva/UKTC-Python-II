@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import numpy as np
 import math
 
 a = int(input('a:'))
@@ -23,3 +25,17 @@ else:
     print('Уравнението има два корена, комплексни числа')
     print('x1 = ', xr, '-i', xi)
     print('x2 = ', xr, '+i', xi)
+
+xplt = np.arange(-20, 20, 0.01)
+yplt = a*xplt**2+b*xplt+c
+plt.plot(xplt, yplt, color='darkblue', label='y=ax^2+bx+c')
+yplt = xplt*xplt
+plt.plot(xplt, yplt, color='magenta', label='y=x^2')
+yplt = a*xplt+b
+plt.plot(xplt, yplt, color='yellowgreen', label='y=ax+b')
+
+plt.title('Графики на функции')
+plt.xlabel('X')
+plt.ylabel('Y', loc='top', rotation=0)
+plt.legend(loc='lower left')
+plt.show()
