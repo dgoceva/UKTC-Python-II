@@ -35,7 +35,7 @@ yplt = a*xplt+b
 plt.plot(xplt, yplt, color='yellowgreen', label='y=ax+b')
 
 plt.title('Графики на функции')
-plt.xlabel('X')
+plt.xlabel('X', loc='right')
 plt.ylabel('Y', loc='top', rotation=0)
-plt.legend(loc='lower left')
+plt.legend(loc='upper right', frameon=False)
 plt.show()
