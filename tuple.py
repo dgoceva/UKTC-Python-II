@@ -50,3 +50,10 @@ for t in t2:
             mint = t
 
 print(mint)
+
+t1 = (1, 2, 3, 4)
+a1, a2, a3, a4 = t1
+print(a1, a2, a3, a4)
+
+# a1, a2 = t1
+# print(a1, a2)
