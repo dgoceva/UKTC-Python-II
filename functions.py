@@ -64,3 +64,11 @@ print(average(ll1))
 print(average([]))
 x = [a for a in range(10)]
 print(x)
+ll = [int(x) for x in input().split()]
+print(ll)
+ll = [x for x in input().split(',')]
+print(ll)
+ll2 = [x for x in ll1 if x < 0 and x % 2 == 0]
+res = average(ll2)
+print(round(res, 2))
+print(round(average([x for x in ll1 if x < 0 and x % 2 == 0]), 2))
